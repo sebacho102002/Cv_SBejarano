@@ -1,0 +1,125 @@
+body{
+	background-image: url(../photos/posible.jpg);
+    background-repeat: round;
+	
+}
+.logomenu{
+    background-color: dimgray;
+    
+    border-style: dashed;
+}
+
+.contenedor {
+    width: 980px;
+    height: auto;
+    background-color: darkgray;
+
+    /* background-color: #EEEEEE; */
+    margin: auto;
+    box-shadow: 1px 0px 1px black, -1px 0px 1px black;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+}
+.nombre{
+	display: table;
+    float: left;
+    overflow: auto;
+}
+.nombreimg{
+	width: 100px;
+    height: 100px;
+}
+.nombre h1 {
+    display: table-cell;
+    vertical-align: middle;
+}
+.barramenu {
+    display: table-cell;
+    vertical-align: middle;
+    padding: 10px;
+    text-align: right;
+    
+}
+
+.barramenu ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    overflow: hidden;
+}
+
+.barramenu li {
+    display: inline-block;
+    margin-right: 18px;
+}
+
+.barramenu li a {
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 25px;
+    text-decoration: none;
+}
+
+.barramenu ul li a:hover {
+    color: beige;
+    background-color: slategray;
+    border-radius: 50%;
+}
+.imagen img {
+    width: 17%;
+    height: auto;
+    margin-top: 20px;
+    padding-top: 5px;
+    border-radius: 50%;
+    position: relative;
+    right: 120px;
+    
+}
+.eslogan {
+    text-align: center;
+}
+
+.eslogan h1 {
+    font-size: 30px;
+    font-family: ""
+}
+
+.eslogan h3 {
+    font-size: 15px;
+    font-family: 'Noto Sans', sans-serif;
+}
+
+.eslogan p {
+    font-size: 45px font-family 'Satisfy', cursive;        
+}
+
+.conocimientos {
+    display: flex;
+    justify-content: space-around;
+}
+.conocimiento {
+    text-align: left;
+    margin: 10px;
+    font-family: 'Gloria Hallelujah', cursive;
+}
+
+.conocimiento img {
+    width: 250px;
+    height: 250px;
+    text-align: end;
+    border-radius: 20%K;
+}
+
+.conocimiento h3 {
+    font-size: 40px;
+}
+.conocimiento p {
+    font-size: 15px;
+}
+
+.piepagina h2{
+    text-align: center;
+    
+}
