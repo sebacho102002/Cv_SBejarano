@@ -1,125 +1,168 @@
-body{
-	background-image: url(../photos/posible.jpg);
+body {
+    background-image: url(../photos/posible.jpg);
     background-repeat: round;
-	
-}
-.logomenu{
-    background-color: dimgray;
-    
-    border-style: dashed;
+    font-family: Arial, sans-serif;
+    color: #333;
 }
 
+/* Contenedor principal */
 .contenedor {
     width: 980px;
-    height: auto;
-    background-color: darkgray;
-
-    /* background-color: #EEEEEE; */
     margin: auto;
-    box-shadow: 1px 0px 1px black, -1px 0px 1px black;
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-bottom: 10px;
+    background-color: #f4f4f4;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
-.nombre{
-	display: table;
-    float: left;
-    overflow: auto;
-}
-.nombreimg{
-	width: 100px;
-    height: 100px;
-}
-.nombre h1 {
-    display: table-cell;
-    vertical-align: middle;
-}
-.barramenu {
-    display: table-cell;
-    vertical-align: middle;
+
+/* Logo y menú */
+.logomenu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: dimgray;
     padding: 10px;
-    text-align: right;
-    
+    border-bottom: 2px solid #ccc;
+}
+
+.nombre {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 100px;
+    margin-right: 10px;
 }
 
 .barramenu ul {
-    margin: 0;
-    padding: 0;
+    display: flex;
     list-style: none;
-    overflow: hidden;
+    padding: 0;
+    margin: 0;
 }
 
 .barramenu li {
-    display: inline-block;
-    margin-right: 18px;
+    margin-right: 20px;
 }
 
 .barramenu li a {
-    display: block;
-    color: black;
-    text-align: center;
-    padding: 25px;
+    color: white;
     text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    background-color: #555;
 }
 
-.barramenu ul li a:hover {
-    color: beige;
-    background-color: slategray;
-    border-radius: 50%;
+.barramenu li a:hover {
+    background-color: #777;
 }
-.imagen img {
-    width: 17%;
-    height: auto;
-    margin-top: 20px;
-    padding-top: 5px;
-    border-radius: 50%;
-    position: relative;
-    right: 120px;
-    
-}
+
+/* Sección eslogan */
 .eslogan {
     text-align: center;
+    padding: 20px 0;
+}
+
+.imagen img {
+    width: 150px;
+    height: auto;
+    border-radius: 50%;
+    margin-top: 20px;
 }
 
 .eslogan h1 {
-    font-size: 30px;
-    font-family: ""
+    font-size: 36px;
+    margin: 10px 0;
+    color: #222;
 }
 
 .eslogan h3 {
-    font-size: 15px;
-    font-family: 'Noto Sans', sans-serif;
+    font-size: 18px;
+    color: #666;
 }
 
 .eslogan p {
-    font-size: 45px font-family 'Satisfy', cursive;        
+    font-size: 16px;
+    line-height: 1.6;
+    color: #555;
 }
 
-.conocimientos {
-    display: flex;
-    justify-content: space-around;
-}
-.conocimiento {
-    text-align: left;
-    margin: 10px;
-    font-family: 'Gloria Hallelujah', cursive;
+/* Sección Conocimientos y Estudios */
+.conocimientos, .estudios {
+    margin: 20px 0;
 }
 
-.conocimiento img {
-    width: 250px;
-    height: 250px;
-    text-align: end;
-    border-radius: 20%K;
+.conocimientos h2, .estudios h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #333;
 }
 
-.conocimiento h3 {
-    font-size: 40px;
-}
-.conocimiento p {
-    font-size: 15px;
+.conocimientos ul, .estudios ul {
+    list-style-type: square;
+    padding-left: 20px;
 }
 
-.piepagina h2{
+.conocimientos li, .estudios li {
+    margin-bottom: 8px;
+    font-size: 16px;
+    color: #444;
+}
+
+/* Sección Certificados */
+.certificados {
+    margin: 20px 0;
+}
+
+.certificados h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #333;
     text-align: center;
-    
+}
+
+.galeria-certificados {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 10px;
+}
+
+.galeria-certificados img {
+    width: 30%;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: white;
+}
+
+footer h2, footer p {
+    margin: 5px 0;
+}
+
+/* Responsive: Asegura que las imágenes de los certificados se ajusten en pantallas más pequeñas */
+@media (max-width: 768px) {
+    .galeria-certificados img {
+        width: 45%;
+    }
+
+    .logo {
+        width: 80px;
+    }
+}
+
+@media (max-width: 480px) {
+    .galeria-certificados img {
+        width: 90%;
+    }
+
+    .logo {
+        width: 60px;
+    }
 }
