@@ -10,57 +10,47 @@
 </head>
 <body>
     <div class="contenedor">
-        <div class="logomenu">
+        <!-- Logo y menú -->
+        <header class="logomenu">
             <div class="nombre">
                 <img src="photos/logor.png" alt="Logo" class="logo">
-                <h1>Mi CV</h1>
             </div>
             <nav class="barramenu">
                 <ul>
                     <li><a class="activo" href="#inicio">Inicio</a></li>
                     <li><a href="#conocimientos">Conocimientos</a></li>
+                    <li><a href="#experiencia">Experiencia</a></li>
                     <li><a href="#estudios">Estudios</a></li>
                     <li><a href="#certificados">Certificados</a></li>
                     <li><a href="#contacto">Contacto</a></li>
                 </ul>
             </nav>
-        </div>
-        
+        </header>
+
+        <!-- Sección inicio -->
         <section id="inicio" class="eslogan">
             <div class="imagen">
-                <img src="photos/foto.jpeg" alt="Foto de Juan Sebastián Bejarano">    
+                <img src="photos/foto.jpeg" alt="Foto de Juan Sebastián Bejarano">
+                <h1>Juan Sebastián Bejarano</h1>    
             </div>
 
-            <h1>Juan Sebastián Bejarano</h1>
-            <h3>Edad: 22 años</h3>
-            <h3>C.C 1193547430</h3>
-
-            <p>Perfil:</p>
             <p>
                 Soy un profesional con una combinación única de habilidades técnicas y comunicativas, respaldado por una sólida experiencia
-				en sistemas, electricidad y automatización. Aunque no soy un ingeniero de sistemas graduado, poseo una amplia formación
-				como técnico electricista y tecnólogo en automatización, lo cual me ha permitido desarrollar un enfoque práctico y resolutivo ante
-				los desafíos tecnológicos. Además, como comunicador social, tengo la capacidad de transmitir ideas y soluciones de manera
-				clara y efectiva, facilitando la colaboración en equipos multidisciplinarios.
-
+                en sistemas, electricidad y automatización. Aunque no soy un ingeniero de sistemas graduado, poseo una amplia formación
+                como técnico electricista y tecnólogo en automatización, lo cual me ha permitido desarrollar un enfoque práctico y resolutivo ante
+                los desafíos tecnológicos. Además, como comunicador social, tengo la capacidad de transmitir ideas y soluciones de manera
+                clara y efectiva, facilitando la colaboración en equipos multidisciplinarios.
             </p>
-			<p>
-				
-				En mi carrera, he demostrado ser un profesional versátil y adaptable, capaz de integrarme rápidamente a nuevos entornos y
-				aprender nuevas tecnologías. Mi formación técnica me ha dotado de un pensamiento analítico y una capacidad destacada para
-				la resolución de problemas, mientras que mi experiencia en comunicación me permite interactuar de manera efectiva con
-				diferentes audiencias, desde colegas técnicos hasta clientes.
-
-			</p>
-			<p>
-				Estoy interesado en continuar mi desarrollo profesional en una empresa de desarrollo de software donde pueda aplicar y
-				expandir mis conocimientos en programación, automatización y gestión de proyectos, contribuyendo a la creación de soluciones
-				innovadoras y de alto impacto.
-			</p>
+            <p>
+                Estoy interesado en continuar mi desarrollo profesional en una empresa de desarrollo de software donde pueda aplicar y
+                expandir mis conocimientos en programación, automatización y gestión de proyectos, contribuyendo a la creación de soluciones
+                innovadoras y de alto impacto.
+            </p>
         </section>
-        
+
+        <!-- Sección Conocimientos -->
         <section id="conocimientos" class="conocimientos">
-            <h2>Conocimientos</h2>
+            <h2>Conocimientos Técnicos</h2>
             <ul>
                 <li><strong>Desarrollo web:</strong> 3 años</li>
                 <li><strong>Automatización:</strong> 2 años</li>
@@ -77,8 +67,50 @@
                 <li><strong>React:</strong> 3 años</li>
             </ul>
         </section>
-        
 
+        <!-- Sección Experiencia -->
+        <section id="experiencia" class="experiencia">
+            <h2>Experiencia Laboral</h2>
+            <div class="experiencia-item">
+                <h3>2024 - 2025</h3>
+                <h4>Ingenio INCAUCA - Analista Jr</h4>
+                <ul>
+                    <li>Realización de scripts para automatizar procesos.</li>
+                    <li>Creación de macros y fórmulas en Excel.</li>
+                    <li>Análisis de datos y creación de redes neuronales.</li>
+                </ul>
+            </div>
+
+            <div class="experiencia-item">
+                <h3>2023 - 2025</h3>
+                <h4>Universidad Santiago de Cali - Desarrollador Back-end Django</h4>
+                <ul>
+                    <li>Desarrollo en Django con Python para la construcción de una página web.</li>
+                    <li>Desarrollo de scripts de web scraping para una página gubernamental.</li>
+                </ul>
+            </div>
+
+            <div class="experiencia-item">
+                <h3>2021 - 2024</h3>
+                <h4>SESCON SAS - Director de Proyectos</h4>
+                <ul>
+                    <li>Responsable del inicio y final de cada obra realizada por la empresa.</li>
+                    <li>Gestión de proyectos de infraestructura de red, seguridad electrónica y electricidad industrial.</li>
+                    <li>Conocimientos sólidos en CCTV y Automatización.</li>
+                </ul>
+            </div>
+
+            <div class="experiencia-item">
+                <h3>2022 - 2023</h3>
+                <h4>Universidad Santiago de Cali - Desarrollador Full-Stack PHP-Laravel 8</h4>
+                <ul>
+                    <li>Desarrollo Full-Stack en el módulo de plataforma SIPAC USC para el fortalecimiento de la investigación.</li>
+                    <li>Investigación en Querétaro, México.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Sección Estudios -->
         <section id="estudios" class="estudios">
             <h2>Estudios</h2>
             <ul>
@@ -89,29 +121,37 @@
                 <li>Certificado en CCTV</li>
                 <li>Certificado en producción y post-producción audiovisual</li>
                 <li>Ingeniero en sistemas (Tesista e Investigador USC)</li>
+                <li>Certificado en Redes Neuronales</li>
+                <li>Certificado en Programación Web Full-Stack</li>
+                <li>Certificado en Bases de Datos</li>
+                <li>Curso en Desarrollo de Software</li>
+                <li>Certificación en Gestión de Proyectos</li>
+                <li>Diplomado en Innovación Tecnológica</li>
+                
             </ul>
         </section>
 
+        <!-- Sección Certificados -->
         <section id="certificados" class="certificados">
             <h2>Certificados</h2>
             <div class="galeria-certificados">
                 <img src="photos/certificado1.jpg" alt="Certificado 1">
                 <img src="photos/certificado2.jpg" alt="Certificado 2">
                 <img src="photos/certificado3.jpg" alt="Certificado 3">
-				<img src="photos/certificado4.jpg" alt="Certificado 4">
-				<img src="photos/certificado5.jpg" alt="Certificado 5">
-				<img src="photos/certificado6.jpg" alt="Certificado 6">
-				<img src="photos/certificado7.jpg" alt="Certificado 7">
-				<img src="photos/certificado8.jpg" alt="Certificado 8">
-				<img src="photos/certificado9.jpg" alt="Certificado 9">
-				<img src="photos/certificado10.jpg" alt="Certificado 10">                
+                <img src="photos/certificado4.jpg" alt="Certificado 4">
+                <img src="photos/certificado5.jpg" alt="Certificado 5">
+                <img src="photos/certificado6.jpg" alt="Certificado 6">
+                <img src="photos/certificado7.jpg" alt="Certificado 7">
+                <img src="photos/certificado8.jpg" alt="Certificado 8">
+                <img src="photos/certificado9.jpg" alt="Certificado 9">
+                <img src="photos/certificado10.jpg" alt="Certificado 10">
                 <img src="photos/certificado11.jpg" alt="Certificado 11">
                 <img src="photos/certificado12.jpg" alt="Certificado 12">
                 <img src="photos/certificado13.jpg" alt="Certificado 13">
-                
             </div>
         </section>
 
+        <!-- Footer -->
         <footer id="contacto">
             <h2>Contacto</h2>
             <p>Teléfono: 3053947290</p>

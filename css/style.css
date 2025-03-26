@@ -1,159 +1,208 @@
+/* Reset de estilo */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
-    background-image: url(../photos/posible.jpg);
-    background-repeat: round;
-    font-family: Arial, sans-serif;
+    background-color: #f0f2f5;
+    font-family: 'Roboto', Arial, sans-serif;
     color: #333;
+    line-height: 1.6;
 }
 
 /* Contenedor principal */
 .contenedor {
-    width: 980px;
-    margin: auto;
-    background-color: #f4f4f4;
-    padding: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 85%;
+    max-width: 1200px;
+    margin: 40px auto;
+    background-color: #fff;
+    padding: 50px;
+    border-radius: 12px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
 }
 
 /* Logo y menú */
-.logomenu {
+header.logomenu {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: dimgray;
-    padding: 10px;
-    border-bottom: 2px solid #ccc;
+    background-color: #1f2a44;
+    padding:20px;
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-.nombre {
+header .nombre {
     display: flex;
     align-items: center;
 }
 
-.logo {
-    width: 100px;
-    margin-right: 10px;
+header .logo {
+    width: 110px;
 }
 
-.barramenu ul {
+header .barramenu ul {
     display: flex;
     list-style: none;
-    padding: 0;
-    margin: 0;
 }
 
-.barramenu li {
-    margin-right: 20px;
+header .barramenu li {
+    margin-left: 25px;
 }
 
-.barramenu li a {
-    color: white;
+header .barramenu li a {
+    color: #fff;
     text-decoration: none;
-    padding: 10px 15px;
-    border-radius: 5px;
-    background-color: #555;
+    font-size: 16px;
+    padding: 12px 18px;
+    border-radius: 8px;
+    font-weight: 500;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.barramenu li a:hover {
-    background-color: #777;
+header .barramenu li a:hover {
+    background-color: #4e5d77;
+    color: #f1f1f1;
 }
 
-/* Sección eslogan */
+header .barramenu li a.activo {
+    background-color: #596b86;
+}
+
+/* Sección principal */
 .eslogan {
     text-align: center;
-    padding: 20px 0;
-}
-
-.imagen img {
-    width: 150px;
-    height: auto;
-    border-radius: 50%;
-    margin-top: 20px;
+    margin-top: 30px;
 }
 
 .eslogan h1 {
-    font-size: 36px;
-    margin: 10px 0;
-    color: #222;
-}
-
-.eslogan h3 {
-    font-size: 18px;
-    color: #666;
+    font-size: 2em;
+    font-weight: 600;
+    color: #333;
+    margin-top: 20px;
 }
 
 .eslogan p {
-    font-size: 16px;
-    line-height: 1.6;
+    font-size: 1.1em;
     color: #555;
+    max-width: 900px;
+    margin: 0 auto 20px;
+    line-height: 1.8;
 }
 
-/* Sección Conocimientos y Estudios */
-.conocimientos, .estudios {
-    margin: 20px 0;
+.eslogan .imagen img {
+    width: 14ks0px;
+    height: 200px;
+    border-radius: 110%;
+    border: 3px solid #1f2a44;
+    margin-bottom: 20px;
+    object-fit: cover;
+    object-position: top;
 }
 
-.conocimientos h2, .estudios h2 {
-    font-size: 24px;
-    margin-bottom: 10px;
-    color: #5a5bad;
+/* Sección Conocimientos */
+.conocimientos h2 {
+    font-size: 2em;
+    color: #1f2a44;
+    margin-bottom: 20px;
+    font-weight: 700;
+    border-bottom: 4px solid #4e5d77;
+    padding-bottom: 10px;
+    text-transform: uppercase;
 }
 
-.conocimientos ul, .estudios ul {
-    list-style-type: square;
+.conocimientos ul {
+    list-style: none;
     padding-left: 20px;
 }
 
-.conocimientos li, .estudios li {
+.conocimientos li {
+    font-size: 1.1em;
+    margin-bottom: 12px;
+    color: #555;
+}
+
+/* Sección Experiencia */
+.experiencia h2 {
+    font-size: 2em;
+    color: #1f2a44;
+    margin-bottom: 20px;
+    font-weight: 700;
+    border-bottom: 4px solid #4e5d77;
+    padding-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.experiencia .experiencia-item {
+    margin-bottom: 30px;
+}
+
+.experiencia .experiencia-item h3 {
+    font-size: 1.4em;
+    color: #333;
+}
+
+.experiencia .experiencia-item h4 {
+    font-size: 1.2em;
+    color: #777;
+}
+
+.experiencia .experiencia-item ul {
+    margin-left: 20px;
+    color: #555;
+}
+
+.experiencia .experiencia-item ul li {
+    font-size: 1.1em;
     margin-bottom: 8px;
-    font-size: 16px;
-    color: #444;
 }
 
 /* Sección Certificados */
-.certificados {
-    margin: 20px 0;
-}
-
-.certificados h2 {
-    font-size: 24px;
-    margin-bottom: 10px;
-    color: #5a5bad;
-    text-align: center;
-}
-
 .galeria-certificados {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
-    gap: 10px;
+    gap: 20px;
+    justify-content: space-between;
 }
 
 .galeria-certificados img {
-    width: 30%;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 32%;
+    border-radius: 10px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.galeria-certificados img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.25);
 }
 
 /* Footer */
 footer {
     text-align: center;
-    padding: 20px;
-    background-color: #333;
+    padding: 30px;
+    background-color: #1f2a44;
     color: white;
+    border-radius: 12px;
+    margin-top: 50px;
 }
 
-footer h2, footer p {
-    margin: 5px 0;
+footer h2,
+footer p {
+    margin-bottom: 10px;
+    font-weight: 600;
 }
 
-/* Responsive: Asegura que las imágenes de los certificados se ajusten en pantallas más pequeñas */
+/* Responsive */
 @media (max-width: 768px) {
     .galeria-certificados img {
-        width: 45%;
+        width: 48%;
     }
 
-    .logo {
-        width: 80px;
+    header .logo {
+        width: 60px;
     }
 }
 
@@ -162,7 +211,7 @@ footer h2, footer p {
         width: 90%;
     }
 
-    .logo {
-        width: 60px;
+    header .logo {
+        width: 50px;
     }
 }
