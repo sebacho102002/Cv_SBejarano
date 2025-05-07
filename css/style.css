@@ -1,217 +1,586 @@
-/* Reset de estilo */
-* {
+/* Reset y variables globales */
+:root {
+    --primary: #4b5563;
+    --primary-dark: #374151;
+    --secondary: #f9fafb;
+    --dark: #1f2937;
+    --light: #f8fafc;
+    --gray: #6b7280;
+    --gray-light: #e5e7eb;
+    --accent: #64748b;
+    --border-radius: 12px;
+    --box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    --transition: all 0.3s ease;
+  }
+  
+  * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-
-body {
-    background-color: #f0f2f5;
-    font-family: 'Roboto', Arial, sans-serif;
-    color: #333;
-    line-height: 1.6;
-}
-
-/* Contenedor principal */
-.contenedor {
-    width: 85%;
+  }
+  
+  body {
+    background-color: #f3f4f6;
+    font-family: 'Inter', 'Segoe UI', system-ui, -apple-system, sans-serif;
+    color: var(--dark);
+    line-height: 1.7;
+  }
+  
+  /* Contenedor principal */
+  .contenedor {
+    width: 90%;
     max-width: 1200px;
     margin: 40px auto;
-    background-color: #fff;
-    padding: 50px;
-    border-radius: 12px;
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
-}
-
-/* Logo y menú */
-header.logomenu {
+    background-color: var(--light);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    overflow: hidden;
+  }
+  
+  /* Header y navegación */
+  header.logomenu {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #1f2a44;
-    padding:20px;
-    border-radius: 20px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-header .nombre {
+    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+    padding: 20px 40px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+  
+  header .nombre {
     display: flex;
     align-items: center;
-}
-
-header .logo {
+  }
+  
+  header .logo {
     width: 110px;
-}
-
-header .barramenu ul {
+    filter: brightness(0) invert(1);
+    transition: var(--transition);
+  }
+  
+  header .logo:hover {
+    transform: scale(1.05);
+  }
+  
+  header .barramenu ul {
     display: flex;
     list-style: none;
-}
-
-header .barramenu li {
-    margin-left: 25px;
-}
-
-header .barramenu li a {
-    color: #fff;
+    gap: 10px;
+  }
+  
+  header .barramenu li a {
+    color: white;
     text-decoration: none;
-    font-size: 16px;
-    padding: 12px 18px;
-    border-radius: 8px;
+    font-size: 15px;
+    padding: 10px 16px;
+    border-radius: 30px;
     font-weight: 500;
-    transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-header .barramenu li a:hover {
-    background-color: #4e5d77;
-    color: #f1f1f1;
-}
-
-header .barramenu li a.activo {
-    background-color: #596b86;
-}
-
-/* Sección principal */
-.eslogan {
-    text-align: center;
-    margin-top: 30px;
-}
-
-.eslogan h1 {
-    font-size: 2em;
+    transition: var(--transition);
+    display: block;
+  }
+  
+  header .barramenu li a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+  }
+  
+  header .barramenu li a.activo {
+    background-color: rgba(255, 255, 255, 0.3);
     font-weight: 600;
-    color: #333;
-    margin-top: 20px;
-}
-
-.eslogan p {
-    font-size: 1.1em;
-    color: #555;
-    max-width: 900px;
-    margin: 0 auto 20px;
-    line-height: 1.8;
-}
-
-.eslogan .imagen img {
-    width: 14ks0px;
-    height: 200px;
-    border-radius: 110%;
-    border: 3px solid #1f2a44;
-    margin-bottom: 20px;
+  }
+  
+  /* Sección principal */
+  .eslogan {
+    padding: 60px 40px;
+    text-align: center;
+    background-color: var(--secondary);
+    position: relative;
+  }
+  
+  .eslogan::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.03));
+  }
+  
+  .eslogan .imagen {
+    margin-bottom: 30px;
+  }
+  
+  .eslogan .imagen img {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
     object-fit: cover;
     object-position: top;
-}
-
-/* Sección Conocimientos */
-.conocimientos h2 {
-    font-size: 2em;
-    color: #1f2a44;
-    margin-bottom: 20px;
+    border: 4px solid white;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    transition: var(--transition);
+  }
+  
+  .eslogan .imagen img:hover {
+    transform: scale(1.03);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+  }
+  
+  .eslogan h1 {
+    font-size: 2.5rem;
     font-weight: 700;
-    border-bottom: 4px solid #4e5d77;
-    padding-bottom: 10px;
-    text-transform: uppercase;
-}
-
-.conocimientos ul {
-    list-style: none;
-    padding-left: 20px;
-}
-
-.conocimientos li {
-    font-size: 1.1em;
-    margin-bottom: 12px;
-    color: #555;
-}
-
-/* Sección Experiencia */
-.experiencia h2 {
-    font-size: 2em;
-    color: #1f2a44;
-    margin-bottom: 20px;
-    font-weight: 700;
-    border-bottom: 4px solid #4e5d77;
-    padding-bottom: 10px;
-    text-transform: uppercase;
-}
-
-.experiencia .experiencia-item {
+    color: var(--primary-dark);
+    margin: 15px 0;
+    position: relative;
+    display: inline-block;
+  }
+  
+  .eslogan h1::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background-color: var(--primary);
+    border-radius: 2px;
+  }
+  
+  .eslogan p {
+    font-size: 1.1rem;
+    color: var(--gray);
+    max-width: 800px;
+    margin: 25px auto;
+    line-height: 1.8;
+  }
+  
+  /* Secciones comunes */
+  section {
+    padding: 60px 40px;
+    position: relative;
+  }
+  
+  section:nth-child(odd) {
+    background-color: #fafafa;
+  }
+  
+  section h2 {
+    font-size: 2rem;
+    color: var(--primary-dark);
     margin-bottom: 30px;
-}
-
-.experiencia .experiencia-item h3 {
-    font-size: 1.4em;
-    color: #333;
-}
-
-.experiencia .experiencia-item h4 {
-    font-size: 1.2em;
-    color: #777;
-}
-
-.experiencia .experiencia-item ul {
-    margin-left: 20px;
-    color: #555;
-}
-
-.experiencia .experiencia-item ul li {
-    font-size: 1.1em;
-    margin-bottom: 8px;
-}
-
-/* Sección Certificados */
-.galeria-certificados {
-    display: flex;
-    flex-wrap: wrap;
+    font-weight: 700;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 10px;
+  }
+  
+  section h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background-color: var(--primary);
+    border-radius: 2px;
+  }
+  
+  /* Sección Conocimientos */
+  .conocimientos ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     gap: 20px;
-    justify-content: space-between;
-}
-
-.galeria-certificados img {
-    width: 32%;
-    border-radius: 10px;
-    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.galeria-certificados img:hover {
-    transform: scale(1.05);
-    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.25);
-}
-
-/* Footer */
-footer {
-    text-align: center;
-    padding: 30px;
-    background-color: #1f2a44;
-    color: white;
-    border-radius: 12px;
-    margin-top: 50px;
-}
-
-footer h2,
-footer p {
-    margin-bottom: 10px;
+    list-style: none;
+    padding: 0;
+  }
+  
+  .conocimientos li {
+    background-color: white;
+    padding: 20px;
+    border-radius: var(--border-radius);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: var(--transition);
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .conocimientos li:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  }
+  
+  .conocimientos li strong {
+    color: var(--primary-dark);
     font-weight: 600;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-    .galeria-certificados img {
-        width: 48%;
+    display: block;
+    margin-bottom: 5px;
+    font-size: 1.1rem;
+  }
+  
+  .conocimientos li::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 5px;
+    height: 100%;
+    background-color: var(--primary);
+  }
+  
+  /* Sección Experiencia */
+  .experiencia-item {
+    background-color: white;
+    padding: 25px;
+    border-radius: var(--border-radius);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    margin-bottom: 25px;
+    transition: var(--transition);
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .experiencia-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  }
+  
+  .experiencia-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 5px;
+    height: 100%;
+    background-color: var(--primary);
+  }
+  
+  .experiencia-item h3 {
+    font-size: 1.2rem;
+    color: var(--accent);
+    font-weight: 600;
+    margin-bottom: 5px;
+  }
+  
+  .experiencia-item h4 {
+    font-size: 1.4rem;
+    color: var(--dark);
+    margin-bottom: 15px;
+    font-weight: 600;
+  }
+  
+  .experiencia-item ul {
+    margin-left: 20px;
+  }
+  
+  .experiencia-item ul li {
+    margin-bottom: 8px;
+    position: relative;
+  }
+  
+  .experiencia-item ul li::before {
+    content: '•';
+    color: var(--primary);
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+  }
+  
+  /* Sección Estudios */
+  .estudios ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+  }
+  
+  .estudios li {
+    background-color: white;
+    padding: 20px;
+    border-radius: var(--border-radius);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: var(--transition);
+    position: relative;
+    overflow: hidden;
+    font-weight: 500;
+  }
+  
+  .estudios li:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    background-color: var(--primary);
+    color: white;
+  }
+  
+  .estudios li::before {
+    content: '✓';
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    color: var(--primary);
+    font-size: 1.2rem;
+    transition: var(--transition);
+  }
+  
+  .estudios li:hover::before {
+    color: white;
+  }
+  
+  /* Sección Certificados */
+  .certificados h2 {
+    margin-bottom: 40px;
+  }
+  
+  .galeria-certificados {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 25px;
+  }
+  
+  .galeria-certificados img {
+    width: 100%;
+    height: auto; /* Cambiado de 200px a auto para evitar recortes */
+    max-height: 300px; /* Altura máxima para mantener consistencia */
+    object-fit: contain; /* Cambiado de cover a contain para mostrar la imagen completa */
+    border-radius: var(--border-radius);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    transition: var(--transition);
+    background-color: white; /* Fondo blanco para imágenes con transparencia */
+    padding: 10px; /* Añadido padding para que las imágenes no toquen los bordes */
+  }
+  
+  .galeria-certificados img:hover {
+    transform: scale(1.03);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+    cursor: pointer; /* Indica que es clickeable */
+  }
+  
+  /* Modal para certificados */
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  .modal.show {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 1;
+  }
+  
+  .modal-content {
+    max-width: 90%;
+    max-height: 90%;
+    margin: auto;
+    display: block;
+  }
+  
+  .modal-close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  /* Footer */
+  footer {
+    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+    color: white;
+    padding: 40px;
+    text-align: center;
+  }
+  
+  footer h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 10px;
+  }
+  
+  footer h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background-color: white;
+    border-radius: 2px;
+  }
+  
+  footer p {
+    font-size: 1.1rem;
+    margin: 10px 0;
+  }
+  
+  /* Botón de contacto */
+  footer .contacto-botones {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 25px;
+  }
+  
+  footer .contacto-boton {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: white;
+    padding: 12px 25px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: var(--transition);
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+  }
+  
+  footer .contacto-boton:hover {
+    background-color: white;
+    color: var(--primary);
+    transform: translateY(-3px);
+  }
+  
+  /* Animaciones de scroll */
+  .fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+  
+  .fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  /* Responsive */
+  @media (max-width: 900px) {
+    header.logomenu {
+      flex-direction: column;
+      padding: 20px;
     }
-
+    
+    header .nombre {
+      margin-bottom: 15px;
+    }
+    
+    header .barramenu ul {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    
+    .eslogan {
+      padding: 40px 20px;
+    }
+    
+    section {
+      padding: 40px 20px;
+    }
+    
+    .galeria-certificados {
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .eslogan h1 {
+      font-size: 2rem;
+    }
+    
+    .conocimientos ul,
+    .estudios ul {
+      grid-template-columns: 1fr;
+    }
+    
+    .galeria-certificados {
+      grid-template-columns: 1fr;
+    }
+    
+    header .barramenu li a {
+      padding: 8px 12px;
+      font-size: 14px;
+    }
+    
+    .modal-content {
+      max-width: 95%;
+    }
+  }
+  
+  /* Estilos para impresión */
+  @media print {
+    body {
+      background-color: white;
+      color: black;
+    }
+    
+    .contenedor {
+      width: 100%;
+      margin: 0;
+      padding: 0;
+      box-shadow: none;
+    }
+    
+    header.logomenu {
+      background: none;
+      color: black;
+      padding: 20px;
+    }
+    
     header .logo {
-        width: 60px;
+      filter: none;
     }
-}
-
-@media (max-width: 480px) {
-    .galeria-certificados img {
-        width: 90%;
+    
+    header .barramenu li a {
+      color: black;
     }
-
-    header .logo {
-        width: 50px;
+    
+    .eslogan {
+      background-color: white;
     }
-}
+    
+    .eslogan::after {
+      display: none;
+    }
+    
+    .experiencia-item,
+    .conocimientos li,
+    .estudios li {
+      box-shadow: none;
+      border: 1px solid #ddd;
+    }
+    
+    footer {
+      background: none;
+      color: black;
+      border-top: 1px solid #ddd;
+    }
+    
+    footer .contacto-boton {
+      color: black;
+      background: none;
+      border: 1px solid #ddd;
+    }
+    
+    .fade-in {
+      opacity: 1;
+      transform: none;
+    }
+  }
